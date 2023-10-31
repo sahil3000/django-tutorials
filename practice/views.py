@@ -3,7 +3,13 @@ from django.shortcuts import render
 
 def homePage(request):
     data = {
-        'title': 'Home Page template'
+        'title': 'Home Page template',
+        'list': ["Python", 'Javascript', 'Java'],
+        'students': [
+            { "id": 1, "name": 'test1', "email": 'test1@test.com' },
+            { "id": 2, "name": 'test2', "email": 'test2@test.com' },
+            { "id": 3, "name": 'test3', "email": 'test3@test.com' },
+        ]
     }
     return render(request, 'index.html', data)
 
