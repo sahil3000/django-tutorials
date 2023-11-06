@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/css/main.css' %}">
+    <title>About Us</title>
+</head>
+<body>
+    <header>
+        <h1>About Us</h1>
+    </header>
+    <div class="container">
+        <section id="company-info">
+            <h2>Our Company</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet ultrices ante, vel congue tortor volutpat in.</p>
+            <img src="{% static '/images/image1.jpg' %}" alt="Company Image1">
+        </section>
+        <section id="team-members">
+            <h2>Our Team</h2>
+            <div class="team-member">
+                <img src="{% static '/images/image2.jpg' %}" alt="Team Member 2">
+                <h3>John Doe</h3>
+                <p>Position: CEO</p>
+            </div>
+            <div class="team-member">
+                <img src="{% static '/images/image3.jpg' %}" alt="Team Member 3">
+                <h3>Jane Smith</h3>
+                <p>Position: CTO</p>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2023 Your Company Name</p>
+    </footer>
+</body>
+</html>
