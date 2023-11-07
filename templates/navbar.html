@@ -1,10 +1,10 @@
 <!-- navbar.html -->
 <header>
-    <h1>My Website</h1>
-    <nav>
+    <nav class="navbar">
+        <h1>My Website</h1>
         <ul>
-            <li><a href="{% url "home" %}">Home</a></li>
-            <li><a href="{% url "about" %}">About us</a></li>
+            <li><a class="{% if request.path == "/" %}active{% endif %}" href="{% url "home" %}">Home</a></li>
+            <li><a class="{% if request.path == "/aboutus/" %}active{% endif %}" href="{% url "about" %}">About us</a></li>
         </ul>
     </nav>
 </header>
