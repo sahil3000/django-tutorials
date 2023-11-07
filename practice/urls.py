@@ -19,9 +19,9 @@ from django.urls import path
 from practice import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', views.homePage),
-    path('aboutus/', views.aboutUs),
-    path('course/',views.courses),
-    path('course/<int:courseId>',views.singleCourse),
+    path('admin/', admin.site.urls, name="admin"),
+    path('', views.homePage, name="home"),
+    path('aboutus/', views.aboutUs, name="about"),
+    path('course/',views.courses, name="courses"),
+    path('course/<int:courseId>',views.singleCourse, name='course'),
 ]
