@@ -12,7 +12,7 @@ def homePage(request):
         ],
         'numbers': [10,20,30,40,50]
     }
-    return render(request, 'index.html', data)
+    return render(request, 'home.html', data)
 
 def aboutUs(request):
     return render(request, 'aboutus.html')

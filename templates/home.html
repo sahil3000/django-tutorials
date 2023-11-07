@@ -1,0 +1,31 @@
+{% extends "base.html" %} {% block content %} {% load static %}
+<h1>Welcome to {{title}}</h1>
+<h3>for loop</h3>
+<ul>
+  {% for n in list %}
+  <li>{{forloop.counter}} | {{forloop.counter0}} | {{n}}</li>
+  {% endfor %}
+</ul>
+
+<h3>Print student details</h3>
+<ul>
+  {% for student in students %}
+  <li>{{student.id}} | {{student.name}} | {{student.email}}</li>
+  {% endfor %}
+</ul>
+
+<h3>Print student details</h3>
+<ul>
+  {% if numbers|length > 0 %} {% for number in numbers %} {% if number > 30 %}
+  <li>{{number}} is greater than 30</li>
+  {% else %}
+  <li>{{number}} is less than or equal to 30</li>
+  {% endif %} {% endfor %} {% else %}
+  <li>No data found</li>
+  {% endif %}
+</ul>
+
+<div>
+  <img src="/static/images/image2.jpg" alt="image 2" />
+</div>
+{% endblock content %} {% block title %}Home{% endblock title %}Home
