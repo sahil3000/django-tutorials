@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Course</h1>
+<form method="GET">
+    Name : <input type="text" value="{{name}}" name="name" id="name" />
+    Fee: <input type="text" value="{{fee}}" name="fee" id="fee" />
+    <button type="Submit">Submit</button>
+</form>
+{% endblock content %}
+{% block title %}Course{% endblock title %}

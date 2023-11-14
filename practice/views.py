@@ -18,7 +18,16 @@ def aboutUs(request):
     return render(request, 'aboutus.html')
 
 def courses(request):
-    return HttpResponse("<h1>This is courses page</h1>")
+    data = {}
+    if request.method == 'GET':
+        print("innnnnnnnnn")
+        name = request.GET.get('name', "") # way1
+        fee = request.GET.get('fee', "")    # way2
+        # fee = request.GET["fee"]    # way2
+        data["name"] = name
+        data["fee"] = fee
+    print(data)
+    return render(request, 'course.html', data)
 
 def singleCourse(request, courseId):
     return HttpResponse(courseId)
