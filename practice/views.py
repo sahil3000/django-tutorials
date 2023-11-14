@@ -29,5 +29,16 @@ def courses(request):
     print(data)
     return render(request, 'course.html', data)
 
+def contactUs(request):
+    data = {"isSubmit": False}
+    isSubmit = False
+    if (request.method == 'POST'):
+        name = request.POST.get('name', '')
+        msg = request.POST.get('msg', '')
+        data["name"] = name
+        data["msg"] = msg
+        data["isSubmit"] = True
+    return render(request, 'contact-us.html', data)
+
 def singleCourse(request, courseId):
     return HttpResponse(courseId)

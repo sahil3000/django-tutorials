@@ -1,0 +1,13 @@
+{% extends "base.html" %} {% block title %}Contact Us{% endblock title %} 
+{% block content %}
+<form method="POST">
+  {% csrf_token %} Name :
+  <input type="text" value="" name="name" id="name" /> Message:
+  <input type="text" value="" name="msg" id="msg" />
+  <button type="Submit">Submit</button>
+</form>
+
+{% if isSubmit == True %}
+    <h3>Name : {{name}}</h3>
+    <h3>Message : {{msg}}</h3>
+{% endif %} {% endblock content %}
